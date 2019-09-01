@@ -42,7 +42,7 @@ def split_wiki(path,lang):
 
     for i,l in enumerate(lines):
         if i%100000 == 0: print(i)
-        l = l.replace('#39;', "'").replace('amp;', '&').replace('#146;', "'").replace(
+        l = l.replace('</doc>', "").replace('#39;', "'").replace('amp;', '&').replace('#146;', "'").replace(
             'nbsp;', ' ').replace('#36;', '$').replace('\\n', "\n").replace('quot;', "'").replace(
             '<br />', "\n").replace('\\"', '"').replace('<unk>', 'u_n').replace(' @.@ ', '.').replace(
             ' @-@ ', '-').replace('\\', ' \\ ').replace('\xa0', ' ')
